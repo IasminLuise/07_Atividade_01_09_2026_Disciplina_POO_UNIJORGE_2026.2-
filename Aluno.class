@@ -1,0 +1,64 @@
+public class Aluno {
+    private String nome;
+    private String matricula;
+    private int idade;
+    private double nota01;
+    private double nota02;
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getMatricula() {
+        return this.matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public int getIdade() {
+        return this.idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public double getNota01() {
+        return this.nota01;
+    }
+
+    public void setNota01(double nota1) {
+        this.nota01 = nota1;
+    }
+
+    public double getNota02() {
+        return this.nota02;
+    }
+
+    public void setNota02(double nota2) {
+        this.nota02 = nota2;
+    }
+
+    public double calcularMedia() {
+        double media = (this.nota01 + this.nota02) / (double)2.0F;
+        return media;
+    }
+
+    public void verificaSituacao() {
+        double media = this.calcularMedia();
+        if (media >= (double)7.0F) {
+            System.out.println(this.nome + " Aprovado");
+        } else if (media >= (double)5.0F && media < (double)7.0F) {
+            System.out.println(this.nome + " Recuperação");
+        } else {
+            System.out.println(this.nome + " Reprovado");
+        }
+
+    }
+}
